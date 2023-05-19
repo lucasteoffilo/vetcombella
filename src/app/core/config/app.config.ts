@@ -2,7 +2,7 @@ import { Layout } from 'app/layout/layout.types';
 
 // Types
 export type Scheme = 'auto' | 'dark' | 'light';
-export type Theme = 'default' | string;
+export type Theme = 'purple' | string;
 
 /**
  * AppConfig interface. Update this interface to strictly type your config
@@ -24,7 +24,7 @@ export interface AppConfig
  * FuseConfigService and its methods.
  */
 export const appConfig: AppConfig = {
-    layout: 'classy',
+    layout: 'modern',
     scheme: 'light',
     theme : 'default'
 };
