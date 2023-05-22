@@ -1,105 +1,161 @@
 <div class="flex flex-col flex-auto min-w-0">
-
+    <div class="com" style="max-width: 1200px; margin: 0 auto; padding: 2%; height: 100vh; background-color: #fff;">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Conteúdo da primeira coluna -->
+                <h1 class="font-extrabold" style="font-size: 48px; line-height: 48px; color: #412B79;">Cuide dos seus pets.</h1>
+            </div>
+            <div class="col-md-6">
+                teste
+            </div>
+        </div>
+    </div>
     <!-- Header -->
-    <div class="relative pt-8 pb-28 px-4 sm:pt-20 sm:pb-48 sm:px-16 overflow-hidden bg-gray-800 dark:bg-gray-900 dark">
+    <div class="relative pt-8 pb-28 px-4 sm:pt-20 sm:pb-48 sm:px-16 overflow-hidden" style="background-color: #412B79;">
         <!-- Background - @formatter:off -->
         <!-- Rings -->
-        <svg class="absolute inset-0 pointer-events-none"
-             viewBox="0 0 960 540" width="100%" height="100%" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+        <svg class="absolute inset-0 pointer-events-none" viewBox="0 0 960 540" width="100%" height="100%"
+            preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
             <g class="text-gray-700 opacity-25" fill="none" stroke="currentColor" stroke-width="100">
                 <circle r="234" cx="196" cy="23"></circle>
                 <circle r="234" cx="790" cy="491"></circle>
             </g>
         </svg>
+
+       
+
         <!-- @formatter:on -->
         <div class="z-10 relative flex flex-col items-center">
-            <h2 class="text-xl font-semibold">HELP CENTER</h2>
-            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">
-                How can we help you today?
+            <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center"
+                style="color: #fff;">
+                Como posso ajudar?
             </div>
-            <div class="mt-3 sm:text-2xl text-center tracking-tight text-secondary">
-                Search for a topic or question, check out our FAQs and guides, contact us for detailed support
+            <div class="mt-3 sm:text-2xl text-center tracking-tight text-secondary" style="color: #beacf5!important;">
+                Envie-me uma mensagem no campo abaixo para que eu possa entender o seu problema.
             </div>
-            <mat-form-field class="fuse-mat-no-subscript fuse-mat-rounded fuse-mat-bold w-full max-w-80 sm:max-w-120 mt-10 sm:mt-20">
-                <input
-                    matInput
-                    [placeholder]="'Enter a question, topic or keyword'">
-                <mat-icon
-                    matPrefix
-                    [svgIcon]="'heroicons_outline:search'"></mat-icon>
+            <mat-form-field
+                class="fuse-mat-no-subscript fuse-mat-rounded fuse-mat-bold w-full max-w-80 sm:max-w-120 mt-10 sm:mt-20">
+                <input matInput [placeholder]="'Digite aqui sua mensagem.'">
+                <mat-icon matPrefix [svgIcon]="'heroicons_outline:search'"></mat-icon>
+                <button mat-button matSuffix> <mat-icon>send</mat-icon></button>
             </mat-form-field>
         </div>
     </div>
 
+
     <div class="flex flex-col items-center pb-6 px-6 sm:pb-10 sm:px-10">
         <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-0 md:gap-x-6 w-full max-w-sm md:max-w-4xl -mt-16 sm:-mt-24">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-0 md:gap-x-6 w-full max-w-sm md:max-w-4xl -mt-16 sm:-mt-24">
             <!-- FAQs card -->
-            <div class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
+            <div
+                class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
                 <div class="flex flex-col flex-auto items-center p-8 text-center">
-                    <div class="text-2xl font-semibold">FAQs</div>
-                    <div class="md:max-w-40 mt-1 text-secondary">Frequently asked questions and answers</div>
+                    <div class="text-2xl font-semibold">LinkedIn</div>
+                    <div class="md:max-w-40 mt-1 text-secondary">Acesse meu LinkedIn para mais informações.</div>
                 </div>
-                <div class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
-                    <a
-                        class="flex items-center"
-                        [routerLink]="['faqs']">
+                <div
+                    class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
+                    <a class="flex items-center" [routerLink]="['faqs']">
                         <span class="absolute inset-0"></span>
-                        <span class="font-medium">Go to FAQs</span>
-                        <mat-icon
-                            class="ml-2 icon-size-5 text-current"
+                        <span class="font-medium">Acessar</span>
+                        <mat-icon class="ml-2 icon-size-5 text-current"
                             [svgIcon]="'heroicons_solid:arrow-narrow-right'"></mat-icon>
                     </a>
                 </div>
             </div>
             <!-- Guides card -->
-            <div class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
+            <div
+                class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
                 <div class="flex flex-col flex-auto items-center p-8 text-center">
-                    <div class="text-2xl font-semibold">Guides</div>
-                    <div class="md:max-w-40 mt-1 text-secondary">Articles and resources to guide you</div>
+                    <div class="text-2xl font-semibold">Instagram</div>
+                    <div class="md:max-w-40 mt-1 text-secondary">Acesse meu instagram para conhecer meu trabalho.</div>
                 </div>
-                <div class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
-                    <a
-                        class="flex items-center"
-                        [routerLink]="['guides']">
+                <div
+                    class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
+                    <a class="flex items-center" [routerLink]="['guides']">
                         <span class="absolute inset-0"></span>
-                        <span class="font-medium">Check guides</span>
-                        <mat-icon
-                            class="ml-2 icon-size-5 text-current"
+                        <span class="font-medium">Acessar</span>
+                        <mat-icon class="ml-2 icon-size-5 text-current"
                             [svgIcon]="'heroicons_solid:arrow-narrow-right'"></mat-icon>
                     </a>
                 </div>
             </div>
             <!-- Support card -->
-            <div class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
+            <div
+                class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
                 <div class="flex flex-col flex-auto items-center p-8 text-center">
-                    <div class="text-2xl font-semibold">Support</div>
-                    <div class="md:max-w-40 mt-1 text-secondary">Contact us for more detailed support</div>
+                    <div class="text-2xl font-semibold">WhastApp</div>
+                    <div class="md:max-w-40 mt-1 text-secondary">Fale comigo pelo WhastApp!</div>
                 </div>
-                <div class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
-                    <a
-                        class="flex items-center"
-                        [routerLink]="['support']">
+                <div
+                    class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
+                    <a class="flex items-center" [routerLink]="['support']">
                         <span class="absolute inset-0"></span>
-                        <span class="font-medium">Contact us</span>
-                        <mat-icon
-                            class="ml-2 icon-size-5 text-current"
+                        <span class="font-medium">Conversar</span>
+                        <mat-icon class="ml-2 icon-size-5 text-current"
                             [svgIcon]="'heroicons_solid:arrow-narrow-right'"></mat-icon>
                     </a>
                 </div>
             </div>
         </div>
         <!-- FAQs -->
-        <div class="mt-24 text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-center">Most frequently asked questions</div>
-        <div class="mt-2 text-xl text-center text-secondary">Here are the most frequently asked questions you may check before getting started</div>
+        <div class="mt-24 text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight text-center">Perguntas
+            Frequentes</div>
+        <div class="mt-2 text-xl text-center text-secondary">Aqui estão algumas perguntas frequentes feitas pelos meus
+            clientes</div>
         <mat-accordion class="max-w-4xl mt-12">
-            <ng-container *ngFor="let faq of faqCategory.faqs; trackBy: trackByFn">
+            <ng-container>
                 <mat-expansion-panel>
                     <mat-expansion-panel-header [collapsedHeight]="'56px'">
-                        <mat-panel-title>{{faq.question}}</mat-panel-title>
+                        <mat-panel-title>Quais são os benefícios de contratar um pet sitter?
+                        </mat-panel-title>
                     </mat-expansion-panel-header>
-                    {{faq.answer}}
+                    Contratar um pet sitter traz benefícios significativos para seus animais de estimação. Eles
+                    permanecem em seu ambiente familiar, reduzindo o estresse relacionado à mudança de ambiente. Além
+                    disso, o pet sitter oferece atenção individualizada, mantém a rotina dos animais, administra
+                    medicamentos quando necessário e fornece relatórios regulares sobre a saúde e o bem-estar deles.
                 </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="'56px'">
+                        <mat-panel-title>Em quais ambientes você presta seus serviços como enfermeira veterinária?
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    Como enfermeira veterinária, posso prestar meus serviços em diversos ambientes, como clínicas
+                    veterinárias, hospitais veterinários, abrigos de animais, centros de reabilitação, pet shops,
+                    criadouros e até mesmo em domicílio, oferecendo atendimento personalizado e conveniência para os
+                    proprietários de animais.
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="'56px'">
+                        <mat-panel-title>Como posso agendar uma consulta ou serviço com você?
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    Agendar uma consulta ou serviço comigo é simples. Você pode entrar em contato por WhatsApp ou Email.
+                    Faremos uma breve triagem para
+                    entender suas necessidades e agendar um horário conveniente para ambas as partes.
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="'56px'">
+                        <mat-panel-title>Que tipos de serviços você oferece como enfermeira veterinária?
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    Como enfermeira veterinária, ofereço uma variedade de serviços relacionados ao cuidado e saúde dos
+                    animais. Isso inclui curativos e troca de curativos, administração de medicamentos prescritos,
+                    auxílio em procedimentos veterinários, orientação sobre cuidados pós-operatórios, consultoria sobre
+                    alimentação e higiene, entre outros.
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header [collapsedHeight]="'56px'">
+                        <mat-panel-title>O que devo fazer se tiver uma emergência médica com meu animal de
+                            estimação?</mat-panel-title>
+                    </mat-expansion-panel-header>
+                    Em caso de emergência médica, é importante entrar em contato imediatamente com uma clínica
+                    veterinária de emergência ou hospital veterinário. Eu posso fornecer orientações e auxílio durante
+                    esse processo, mas é essencial buscar atendimento profissional o mais rápido possível para garantir
+                    a melhor assistência ao seu animal de estimação.
+                </mat-expansion-panel>
+
             </ng-container>
         </mat-accordion>
     </div>
