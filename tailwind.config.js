@@ -115,11 +115,16 @@ const config = {
             '10xl': '8rem'
         },
         screens : {
+            // print: {'raw': 'print'},
+            // sm   : '600px',
+            // md   : '960px',
+            // lg   : '1280px',
+            // xl   : '1440px'
             print: {'raw': 'print'},
-            sm   : '600px',
-            md   : '960px',
-            lg   : '1280px',
-            xl   : '1440px'
+            sm   : '640px',
+            md   : '768px',
+            lg   : '1024px',
+            xl   : '1280px'
         },
         extend  : {
             animation : {
