@@ -11,6 +11,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class LandingHomeComponent implements OnInit, OnDestroy {
 
+    public whatsapp;
     private _unsubscribeAll: Subject<any> = new Subject();
 
     /**
@@ -23,28 +24,23 @@ export class LandingHomeComponent implements OnInit, OnDestroy {
     // @ Lifecycle hooks
     // -----------------------------------------------------------------------------------------------------
 
-	
+
     ngOnInit(): void {
 
     }
-	
+
     ngOnDestroy(): void {
         // Unsubscribe from all subscriptions
         this._unsubscribeAll.next();
         this._unsubscribeAll.complete();
     }
 
-    // -----------------------------------------------------------------------------------------------------
-    // @ Public methods
-    // -----------------------------------------------------------------------------------------------------
-
-    /**
-     * Track by function for ngFor loops
-     *
-     * @param index
-     * @param item
-     */
     trackByFn(index: number, item: any): any {
         return item.id || index;
+    }
+
+    sendWhatsapp() {
+        let url = `https://api.whatsapp.com/send/?phone=5521997192888&text=${this.whatsapp.replace(/ /g, "+")}&type=phone_number&app_absent=0`;
+        window.open(url, "_blank");
     }
 }

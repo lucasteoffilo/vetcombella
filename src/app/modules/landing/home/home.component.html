@@ -1,33 +1,35 @@
-<div class="flex flex-col flex-auto min-w-0 px-10">
-    <div style="max-width: 1280px; width: 100%; margin: 0 auto; padding: 2%; height: 620px;">
+<div class="flex flex-col flex-auto min-w-0">
+    <div style="max-width: 1280px; width: 100%; margin: 0 auto; padding: 2%; height: 620px;" class="px-5">
 
         <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <div class="">
-                <h1 class="text-base leading-none font-extrabold text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl"
-                    style="margin-top: 150px; width:  100%; color: #412B79;">O amor
+                <h1 class="mt-20 md:mt-150 text-base leading-none font-extrabold text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl"
+                    style=" width:  100%; color: #412B79;">O amor
                     que seus pets merecem</h1>
 
                 <br>
-                <p class="text-base leading-relaxed text-lg sm:text-lg md:text-xl lg:text-3xl xl:text-2xl 2xl:text-3xl">
+                <p
+                    class=" text-base leading-relaxed text-lg sm:text-lg md:text-xl lg:text-3xl xl:text-2xl 2xl:text-3xl">
                     Ofereço
                     serviços
                     relacionados ao cuidado e saúde dos animais. Confira meu portfólio e
                     torne-se um cliente.</p>
             </div>
             <div class="p-4">
-                <img class="w-450" src="../../../../assets/images/items/gato_cao.png" style="margin-top: 72px;">
+                <img class="w-450 mt-5 md:mt-20" src="../../../../assets/images/items/gato_cao.png">
             </div>
         </div>
 
     </div>
-    <div style="background-color: #5E00D9;" class="py-100">
+    <div style="background-color: #5E00D9;" class="py-150 px-10">
         <div class="max-w-screen-lg mx-auto py-20">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <h2 class="text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight" style="color: #fff;">
                         Sobre
                         mim</h2>
-                    <img src="../../../../assets/images/items/sobre.png" alt="Imagem sobre mim" class="rounded-lg mt-4 w-120">
+                    <img src="../../../../assets/images/items/sobre.png" alt="Imagem sobre mim"
+                        class="rounded-lg mt-4 w-120">
                 </div>
                 <div>
                     <p class="mt-20 text-base leading-relaxed text-lg sm:text-sm md:text-md lg:text-lg xl:text-xl"
@@ -42,6 +44,45 @@
                         do seu pet.</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div style="background-color: #ffffff;" class="py-150 px-10">
+        <div class="max-w-screen-lg mx-auto py-20">
+            <div class="flex items-center p-4  w-4/5">
+                <h2 class="text-4xl font-bold mr-4">Experiência.</h2>
+                <hr class="flex-grow border-b mb-2 border-gray-500">
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+                <!-- <div class="w-full md:w-1/2 p-4">
+                    <div class="rounded-lg flex flex-col justify-end"
+                        style="height: 450px!important; background-image: url('../../../../assets/images/items/cavalo.jpeg'); background-size: cover; background-position: center;">
+                        
+                        <div style="background-color: #f9f9f9; width: 100%; height: 50px; position: relative; border-bottom-left-radius: 5px;" class="py-4">
+                            <span class="text-sm mb-1">Resgate • Cuidados pós-cirúrgico • Alimentação</span>
+                            <h2 class="text-xl font-bold mb-2">ONG Aterro do Flamengo</h2>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="w-full md:w-1/2 p-4">
+                    <div class="rounded-lg flex flex-col justify-end p-4"
+                        style="color: #fff; height: 450px!important; background-image: url('../../../../assets/images/items/cavalo-op.png'); background-size: cover; background-position: center;">
+
+                        <span class="text-sm mb-1">Administração medicamentosa • Cuidados diários</span>
+                        <h2 class="text-xl font-bold mb-2">Fazendo Paraíso</h2>
+
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 p-4">
+                    <div class="rounded-lg flex flex-col justify-end p-4"
+                        style="color: #fff; height: 450px!important; background-image: url('../../../../assets/images/items/gato-op.png'); background-size: cover; background-position: center;">
+                        <span class="text-sm mb-1">Resgate • Cuidados pós-cirúrgico • Alimentação</span>
+                        <h2 class="text-xl font-bold mb-2">ONG Aterro do Flamengo</h2>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -69,9 +110,9 @@
             </div>
             <mat-form-field
                 class="fuse-mat-no-subscript fuse-mat-rounded fuse-mat-bold w-full max-w-80 sm:max-w-120 mt-10 sm:mt-20">
-                <input matInput [placeholder]="'Digite aqui sua mensagem.'">
+                <input matInput [placeholder]="'Digite aqui sua mensagem.'" [(ngModel)]="whatsapp">
                 <mat-icon matPrefix [svgIcon]="'heroicons_outline:search'"></mat-icon>
-                <button mat-button matSuffix> <mat-icon>send</mat-icon></button>
+                <button mat-button matSuffix (click)="sendWhatsapp()"> <mat-icon>send</mat-icon></button>
             </mat-form-field>
         </div>
     </div>
@@ -80,9 +121,9 @@
     <div class="flex flex-col items-center pb-6 px-6 sm:pb-10 sm:px-10">
         <!-- Cards -->
         <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-0 md:gap-x-6 w-full max-w-sm md:max-w-4xl -mt-16 sm:-mt-24">
+            class="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-0 md:gap-x-6 w-full max-w-sm md:max-w-4xl -mt-16 sm:-mt-24">
             <!-- FAQs card -->
-            <div
+            <!-- <div
                 class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
                 <div class="flex flex-col flex-auto items-center p-8 text-center">
                     <div class="text-2xl font-semibold">LinkedIn</div>
@@ -97,7 +138,7 @@
                             [svgIcon]="'heroicons_solid:arrow-narrow-right'"></mat-icon>
                     </a>
                 </div>
-            </div>
+            </div> -->
             <!-- Guides card -->
             <div
                 class="relative flex flex-col rounded-2xl shadow hover:shadow-lg overflow-hidden bg-card transform transition-shadow ease-in-out duration-150">
@@ -107,7 +148,7 @@
                 </div>
                 <div
                     class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
-                    <a class="flex items-center" [routerLink]="['guides']">
+                    <a class="flex items-center" href="https://www.instagram.com/vetcombella/" target="_blank">
                         <span class="absolute inset-0"></span>
                         <span class="font-medium">Acessar</span>
                         <mat-icon class="ml-2 icon-size-5 text-current"
@@ -124,7 +165,9 @@
                 </div>
                 <div
                     class="flex items-center justify-center py-4 px-8 text-primary-500 dark:text-primary-400 bg-gray-50 dark:bg-transparent dark:border-t">
-                    <a class="flex items-center" [routerLink]="['support']">
+                    <a class="flex items-center"
+                        href="https://api.whatsapp.com/send/?phone=5521997192888&text=Quero+saber+mais+sobre+seus+serviços+de+auxiliar+veterinária!%21&type=phone_number&app_absent=0"
+                        target="_blank">
                         <span class="absolute inset-0"></span>
                         <span class="font-medium">Conversar</span>
                         <mat-icon class="ml-2 icon-size-5 text-current"
